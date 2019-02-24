@@ -10,26 +10,6 @@ var connection = mysql.createConnection({
 
 });
 
-// function displayItems() {
-//     connection.connect(function (error) {
-//         connection.query("select item_id, product_name, price, stock_quantity from products where stock_quantity>0", function (error, res) {
-//             if (error) throw error;
-//             else console.log("Id \t Name \t Price \t Quantity\n");
-// for (var i = 0; i < res.length; i++) {
-//     console.log(
-//     res[i].item_id + "\t" + 
-//     res[i].product_name + "\t \t" + 
-//     res[i].price + "\t" + 
-//     res[i].stock_quantity + "\n");
-// }
-//             promptUser(res.length);
-//         });
-//     });
-// }
-// displayItems();
-
-
-
 connection.connect(function (error) {
     if (error) throw error;
     displayItems();
@@ -75,11 +55,11 @@ function promptUser(length) {
                     if (purchaseItem > length + 1 || isNaN(purchaseItem) || isNaN(answer.quantity)
                     ) {
                         if (purchaseItem > length + 1 || isNaN(purchaseItem)) {
-                            console.log("The item is not valid");
+                            console.log("The ID is not valid");
                         }
 
                         if (isNaN(answer.quantity)) {
-                            console.log("Please enter valid quantity");
+                            console.log("Please enter a valid quantity");
                         }
 
                         displayItems();
@@ -106,7 +86,7 @@ function promptUser(length) {
                                         }
                                     );
                                     var totalCost = res[0].price * answer.quantity;
-                                    console.log("The total price of the purchase :" + totalCost.toFixed(2)
+                                    console.log("The total price of the purchase: " + totalCost.toFixed(2)
                                     );
                                 }
                                 displayItems();
