@@ -4,13 +4,25 @@
   "description": "",
   "main": "bamazonCustomer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tteenz/bamazon.git"
+  },
+  "keywords": [
+    "Amazon",
+    "shopping"
+  ],
+  "author": "Tina Tran",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.2.0",
     "mysql": "^2.16.0",
     "requirer": "0.0.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/tteenz/bamazon/issues"
+  },
+  "homepage": "https://github.com/tteenz/bamazon#readme"
 }
